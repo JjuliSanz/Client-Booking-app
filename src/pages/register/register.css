@@ -1,0 +1,42 @@
+
+.rContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.rInput{
+  margin-top: 10px;
+  height: 30px;
+}
+
+.rForm {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.rForm-label {
+  display: grid;
+  align-items: center;
+}
+
+.rForm-label-phone {
+  display: grid;
+  align-items: center;
+  grid-column: 1 / -1;
+}
+
+.rButton {
+  grid-column: 1 / -1;
+  border: none;
+  padding: 10px 20px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+}
+
