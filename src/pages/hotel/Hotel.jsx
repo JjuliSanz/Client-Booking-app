@@ -18,7 +18,7 @@ import { AuthContext } from "../../context/AuthContext.js";
 import Reserve from "../../components/reserve/Reserve";
 
 const Hotel = () => {
-  const URL = process.env.URL;
+  const BACKEND_URL = process.env.BACKEND_URL;
 
   const location = useLocation();
   const id = location.pathname.split("/")[2];
@@ -26,7 +26,7 @@ const Hotel = () => {
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
-  const { data, loading } = useFetch(`${URL}/hotels/find/${id}`);
+  const { data, loading } = useFetch(`${BACKEND_URL}/hotels/find/${id}`);
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 

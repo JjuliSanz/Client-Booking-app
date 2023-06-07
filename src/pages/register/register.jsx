@@ -5,7 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
-  const URL = process.env.URL;
+  const BACKEND_URL = process.env.BACKEND_URL;
 
   const [formData, setFormData] = useState({
     username: "",
@@ -52,14 +52,14 @@ const Register = () => {
         }
       );
 
-      const { url } = uploadRes.data;
+      const { BACKEND_URL } = uploadRes.data;
 
       const newUser = {
         ...formData,
-        img: url,
+        img: BACKEND_URL,
       };
 
-      await axios.post(`${URL}/auth/register`, newUser);
+      await axios.post(`${BACKEND_URL}/auth/register`, newUser);
 
       navigate("/login");
     } catch (err) {

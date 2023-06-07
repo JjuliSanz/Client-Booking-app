@@ -9,7 +9,7 @@ import SearchItem from "../../components/searchItem/SearchItem";
 import useFetch from "../../hooks/useFetch.js";
 
 const List = () => {
-  const URL = process.env.URL;
+  const BACKEND_URL = process.env.BACKEND_URL;
 
   const location = useLocation();
   const [destination, setDestination] = useState(location.state.destination);
@@ -21,7 +21,7 @@ const List = () => {
 
   // const [city, _] = destination.split(",");
   const { data, loading, reFetch } = useFetch(
-    `${URL}/hotels?city=${destination}&min=${min || 0}&max=${max || 999}`
+    `${BACKEND_URL}/hotels?city=${destination}&min=${min || 0}&max=${max || 999}`
   );
 
   const handleClick = () => {
