@@ -18,13 +18,15 @@ import { AuthContext } from "../../context/AuthContext.js";
 import Reserve from "../../components/reserve/Reserve";
 
 const Hotel = () => {
+  const URL = process.env.URL;
+
   const location = useLocation();
   const id = location.pathname.split("/")[2];
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
-  const { data, loading } = useFetch(`/hotels/find/${id}`);
+  const { data, loading } = useFetch(`${URL}/hotels/find/${id}`);
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 

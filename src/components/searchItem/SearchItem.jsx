@@ -9,10 +9,12 @@ const SearchItem = ({ item }) => {
         <h1 className="siTitle">{item.name}</h1>
         <span className="siDistance">{item.distance} Km from center</span>
         <span className="siTaxiOp">Free airport taxi</span>
-        <span className="siSubtitle">
-          {item.title}
+        <span className="siSubtitle">{item.title}</span>
+        <span className="siFeatures">
+          {item.desc.length > 200
+            ? `${item.desc.substring(0, 200)}...`
+            : item.desc}
         </span>
-        <span className="siFeatures">{item.desc.length > 200 ? `${item.desc.substring(0, 200)}...` : item.desc}</span>
         <span className="siCancelOp">Free cancellation </span>
         <span className="siCancelOpSubtitle">
           You can cancel later, so lock in this great price today!

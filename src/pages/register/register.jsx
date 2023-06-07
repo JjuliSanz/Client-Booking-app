@@ -5,6 +5,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const URL = process.env.URL;
+
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -57,7 +59,7 @@ const Register = () => {
         img: url,
       };
 
-      await axios.post("/auth/register", newUser);
+      await axios.post(`${URL}/auth/register`, newUser);
 
       navigate("/login");
     } catch (err) {

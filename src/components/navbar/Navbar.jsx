@@ -5,11 +5,13 @@ import { AuthContext } from "../../context/AuthContext.js";
 import axios from "axios";
 
 const Navbar = () => {
+  const URL = process.env.URL;
+
   const { user, dispatch } = useContext(AuthContext);
 
   const handleLogout = async () => {
     try {
-      await axios.post("/auth/logout");
+      await axios.post(`${URL}/auth/logout`);
       dispatch({ type: "LOGOUT" });
       window.location.reload();
     } catch (err) {

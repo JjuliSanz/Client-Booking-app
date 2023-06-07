@@ -19,6 +19,8 @@ import { AuthContext } from "../../context/AuthContext.js";
 import { Link } from "react-router-dom";
 
 const Header = ({ type }) => {
+  const URL = process.env.URL;
+
   const [destination, setDestination] = useState("");
   const [openDate, setOpenDate] = useState(false);
   const [dates, setDates] = useState([

@@ -2,7 +2,9 @@ import useFetch from "../../hooks/useFetch.js";
 import "./featuredProperties.css";
 
 const FeaturedProperties = () => {
-  const { data, loading} = useFetch("/hotels?featured=true");
+  const URL = process.env.URL;
+
+  const { data, loading} = useFetch(`${URL}/hotels?featured=true`);
 
   return (
     <div className="fp">
