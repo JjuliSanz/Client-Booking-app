@@ -18,7 +18,7 @@ import { AuthContext } from "../../context/AuthContext.js";
 import Reserve from "../../components/reserve/Reserve";
 
 const Hotel = () => {
-  const BACKEND_URL = process.env.BACKEND_URL;
+  const BACKEND_URL = "https://backend-booking-app.onrender.com/api";
 
   const location = useLocation();
   const id = location.pathname.split("/")[2];

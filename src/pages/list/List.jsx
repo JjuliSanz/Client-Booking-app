@@ -9,7 +9,7 @@ import SearchItem from "../../components/searchItem/SearchItem";
 import useFetch from "../../hooks/useFetch.js";
 
 const List = () => {
-  const BACKEND_URL = process.env.BACKEND_URL;
+  const BACKEND_URL = "https://backend-booking-app.onrender.com/api";
 
   const location = useLocation();
   const [destination, setDestination] = useState(location.state.destination);

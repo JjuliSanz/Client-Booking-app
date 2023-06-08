@@ -5,7 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const BACKEND_URL = process.env.BACKEND_URL;
+  const BACKEND_URL = "https://backend-booking-app.onrender.com/api";
   const [credentials, setCredentials] = useState({
     username: undefined,
     password: undefined,

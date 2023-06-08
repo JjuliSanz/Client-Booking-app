@@ -2,7 +2,7 @@ import useFetch from "../../hooks/useFetch.js";
 import "./propertyList.css";
 
 const PropertyList = () => {
-  const BACKEND_URL = process.env.BACKEND_URL;
+  const BACKEND_URL = "https://backend-booking-app.onrender.com/api";
   const { data, loading } = useFetch(`${BACKEND_URL}/hotels/countByType`);
 
   const images = [

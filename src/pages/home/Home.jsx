@@ -8,6 +8,8 @@ import PropertyList from "../../components/propertyList/PropertyList";
 import "./home.css";
 
 const Home = () => {
+  const BACKEND_URL = "https://backend-booking-app.onrender.com/api";
+  console.log(`${BACKEND_URL}`);
   return (
     <div>
       <Navbar />

@@ -2,7 +2,7 @@ import useFetch from "../../hooks/useFetch.js";
 import "./featured.css";
 
 const Featured = () => {
-  const BACKEND_URL = process.env.BACKEND_URL;
+  const BACKEND_URL = "https://backend-booking-app.onrender.com/api";
 
   // const { data, loading, error } = useFetch(
   //   "/hotels/countByCity?cities=berlin,madrid,london"

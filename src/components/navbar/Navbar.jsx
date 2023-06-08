@@ -5,7 +5,7 @@ import { AuthContext } from "../../context/AuthContext.js";
 import axios from "axios";
 
 const Navbar = () => {
-  const BACKEND_URL = process.env.BACKEND_URL;
+  const BACKEND_URL = "https://backend-booking-app.onrender.com/api";
 
   const { user, dispatch } = useContext(AuthContext);
 

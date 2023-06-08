@@ -5,7 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
-  const BACKEND_URL = process.env.BACKEND_URL;
+  const BACKEND_URL = "https://backend-booking-app.onrender.com/api";
 
   const [formData, setFormData] = useState({
     username: "",
@@ -52,11 +52,11 @@ const Register = () => {
         }
       );
 
-      const { BACKEND_URL } = uploadRes.data;
+      const { backendURL } = uploadRes.data;
 
       const newUser = {
         ...formData,
-        img: BACKEND_URL,
+        img: backendURL,
       };
 
       await axios.post(`${BACKEND_URL}/auth/register`, newUser);
