@@ -10,6 +10,18 @@
   padding: 50px;
 }
 
+.mailInputContainer {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+}
+
+@media screen and (min-width: 640px) {
+  .mailInputContainer{
+    width: 100%;
+  }
+}
+
 .mailInputContainer>input{
   width: 300px;
   height: 30px;

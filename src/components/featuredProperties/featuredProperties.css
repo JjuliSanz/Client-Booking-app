@@ -2,8 +2,22 @@
   width: 100%;
   max-width: 1024px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   gap: 20px;
+  padding: 0px 10px;
+}
+
+@media screen and (min-width: 640px) {
+  .fp{
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .fp{
+    padding: 0px;
+  }
 }
 
 .fpItem{
@@ -11,12 +25,14 @@
   gap: 10px;
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
 }
 
 .fpImg{
   width: 100%;
   height: 250px;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .fpName{
@@ -36,7 +52,9 @@
   background-color: #003580;
   color: white;
   border: none;
-  padding: 3px;
+  border-radius: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
   margin-right: 10px;
   font-weight: bold;
 }

@@ -10,6 +10,13 @@
   width: 100%;
   max-width: 1024px;
   margin: 20px 0px 100px 0px;
+  padding: 0px 10px;
+}
+
+@media screen and (min-width: 1060px) {
+  .headerContainer{
+    padding: 0px;
+  }
 }
 
 .headerContainer.listMode {
@@ -26,12 +33,14 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  opacity: 0.5;
 }
 
 .headerListItem.active {
   border: 1px solid white;
   padding: 10px;
   border-radius: 20px;
+  opacity: 1;
 }
 
 .headerDesc {
@@ -43,25 +52,39 @@
   color: white;
   font-weight: 500;
   border: none;
-  padding: 10px;
+  padding: 5px 10px;
   cursor: pointer;
-  margin: 5px;
+  margin: 0px 5px;
   border-radius: 10px;
 }
 
 .headerSearch {
-  height: 30px;
+  height: 130px;
   background-color: white;
   border: 3px solid #febb02;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding: 10px 0px;
   border-radius: 5px;
   position: absolute;
-  bottom: -25px;
-  width: 100%;
+  bottom: -70px;
+  width: 98%;
   max-width: 1024px;
+}
+
+@media screen and (min-width: 640px) {
+  .headerSearch {
+    flex-direction: row;
+    height: 30px;
+    bottom: -25px;
+    width: 100%;
+    padding: 10px 0px;
+  }
+  .headerBtn {
+    margin: 5px;
+    padding: 10px;
+  }
 }
 
 .headerIcon {

@@ -44,7 +44,7 @@ const Footer = () => {
           <li className="fListItem">Terms & conditions</li>
         </ul>
       </div>
-      <div className="fText">Copyright © 2023 Buking.</div>
+      <div className="fText">Copyright © 2023 Julian Sanz.</div>
     </div>
   );
 };
